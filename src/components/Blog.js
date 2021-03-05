@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import client from '../utils/Client';
 import Loader from './Loader';
+import truncateText from '../utils/truncateText';
 
 
 const Blog = () => {
@@ -39,7 +40,7 @@ const Blog = () => {
                 <img src={item.fields.blogs_imageTeaser.fields.file.url} alt=""/>
                 <h3><Link to={`../blogs/${item.fields.blogs_slug}`}>{item.fields.blogs_title}</Link></h3>
                 <p>
-                  {item.fields.blogs_description}
+                  {truncateText(item.fields.blogs_description, 250)}
                 </p>
                 <Link to={`../blogs/${item.fields.blogs_slug}`} className="btn btn-primary">Read more...</Link>
               </div>
