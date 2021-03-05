@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 const Navbar = () => {
   return(
     <Fragment>
-      <header>
-      <nav className="navbar navbar-expand-md navbar-dark sticky-top bg-dark">          
+      <header class="mt-5">
+      <nav className="navbar sticky-top navbar-expand-md navbar-dark bg-dark">          
           <div className="container container-fluid">
             <a className="navbar-brand" href="/">Logo</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

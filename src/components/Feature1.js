@@ -41,13 +41,13 @@ const Feature1 = () => {
 
   return(
     <Fragment>
-      <section id="feature">
+      <section id="feature" className="p-4">
       {
         feature.length === 0 ?
         <Loader/>
         :
         <div>
-          <div className="container text-center pt-4">
+          <div className="container text-center">
             <h1>{feature.feature_title}</h1>
             <p className="lead">{feature.feature_description}</p>
           </div>

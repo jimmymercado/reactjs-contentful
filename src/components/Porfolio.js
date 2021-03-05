@@ -22,7 +22,7 @@ const Portfolio = () => {
         portfolio.length === 0 ?
         <Loader/>
         :
-        <section id="portfolio">
+        <section id="portfolio" className="p-4">
           <div className="container">
             <h2>Portfolio</h2>
             <p className="lead">Voluptas sed, natus eos. Commodi per voluptate vestibulum voluptas nibh. Class ante, eiusmod quidem aliqua sociis, platea eros nullam perferendis, cillum natoque maxime cras, duis voluptas soluta tincidunt magnam sodales, erat eveniet cras semper, culpa vitae accusamus quidem, litora mus! Sed cupiditate, earum vestibulum, aliquet lectus diam blanditiis. Enim harum.</p>
