@@ -41,7 +41,7 @@ const Accordion = () => {
             <h2>{accordion.fields.title}</h2>
             <p className="lead" dangerouslySetInnerHTML={getParsedMarkdown(accordion.fields.description)}></p>
                     
-            <div className="container">
+            
               <div className="accordion" id="accordionExample">
               {
                 accordion.fields.accordionItems.map((item, num = 0) => {
@@ -65,7 +65,7 @@ const Accordion = () => {
               }
                 
                 
-              </div>
+              
             </div>
             <div className="spacer"/>
           </div>
