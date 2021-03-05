@@ -14,7 +14,7 @@ const Feature2 = (props) => {
     })
     .then((entries) => {
        setData(entries.items[0]);
-       console.log(data);
+       //console.log(data);
     })
 
   }, [data, props.Entry_Title])

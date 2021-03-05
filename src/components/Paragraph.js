@@ -14,7 +14,7 @@ const Paragraph = () => {
     })
     .then((entries) => {
        setData(entries.items[0]);
-       console.log(data);
+       //console.log(data);
     })
   }, [data])
 

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Navbar = () => {
   return(
     <Fragment>
-      <header class="mt-5">
+      <header>
       <nav className="navbar sticky-top navbar-expand-md navbar-dark bg-dark">          
           <div className="container container-fluid">
             <a className="navbar-brand" href="/">Logo</a>
