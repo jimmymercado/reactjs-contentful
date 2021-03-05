@@ -1,15 +1,15 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import client from '../utils/Client';
 import Loader from './Loader';
-import Card1 from './Card1';
 
-const Feature2 = (props) => {
+
+const Card1 = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     client.getEntries({
       'content_type': 'services',
-      'fields.service_title': props.Entry_Title,
+      'fields.service_title': props.title,
       //'order': 'fields.services_items.sys.createdAt'
     })
     .then((entries) => {
@@ -17,7 +17,7 @@ const Feature2 = (props) => {
        console.log(data);
     })
 
-  }, [data, props.Entry_Title])
+  }, [])
 
   return(
     <Fragment>      
@@ -34,15 +34,29 @@ const Feature2 = (props) => {
             <div className="row">              
             {
               data.fields.services_items.map((item, index) => {
-                return(                  
-                  <Card1 key={index} CardTitle={item.fields.service_title} CardIcon={item.fields.service_icon.fields.file.url} CardDescription={item.fields.service_description} />
-                )
+                return (
+                  <div className="col-md-4" key={index}>
+                    <div className="media service-wrap">
+                      <div>
+                        <img className="pr-3" src={item.fields.service_icon.fields.file.url} alt='' />
+                      </div>
+                      <div className="media-body">
+                        <h3 className="media-heading">{item.fields.service_title}</h3>
+                        <p>{item.fields.service_description}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
               })
             }
                 
             </div>                
           </div>
-        </section>                       
+        </section>
+
+
+
+                       
       }  
     </Fragment>
   );
@@ -50,4 +64,4 @@ const Feature2 = (props) => {
 }
 
 
-export default Feature2;
+export default Card1;

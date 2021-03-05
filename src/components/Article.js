@@ -23,7 +23,7 @@ const Article = (props) => {
       })
     }
     
-  }, [])
+  }, [slug])
 
   const redirectToTarget = () => {    
     history.push('/blogs');
