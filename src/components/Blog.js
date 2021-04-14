@@ -38,11 +38,11 @@ const Blog = () => {
               return (
               <div key={index} className="col-md-6 blog-content">
                 <img src={item.fields.blogs_imageTeaser.fields.file.url} alt=""/>
-                <h3><Link to={`../blogs/${item.fields.blogs_slug}`}>{item.fields.blogs_title}</Link></h3>
+                <h3><Link to={`../blogs/${item.fields.slug}`}>{item.fields.blogs_title}</Link></h3>
                 <p>
                   {truncateText(item.fields.blogs_description, 250)}
                 </p>
-                <Link to={`../blogs/${item.fields.blogs_slug}`} className="btn btn-primary">Read more...</Link>
+                <Link to={`../blogs/${item.fields.slug}`} className="btn btn-primary">Read more...</Link>
               </div>
               )
             })

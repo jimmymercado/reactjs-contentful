@@ -16,7 +16,7 @@ const Article = (props) => {
       console.log(slug);
       client.getEntries({
         content_type: 'blogs',
-        'fields.blogs_slug': slug
+        'fields.slug': slug
       }).then((entries) => {        
         setData(entries.items[0]);
         //console.log(entries.items[0]);
