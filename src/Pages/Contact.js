@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 
 const Contact = () => {
 
@@ -14,15 +13,15 @@ const Contact = () => {
     bodyFormData.append('sBCC', '');
     bodyFormData.append('format', 'HTML');
 
-    let data = {
-      'sSubject':'subject',
-      'sTo':'jimmy_mercado@trimble.com',
-      'sFrom':'webserver@trimble.com',
-      'sBody':'Hello World',
-      'sCC':'',
-      'sBCC':'',
-      'format':'HTML',
-    }
+    // let data = {
+    //   'sSubject':'subject',
+    //   'sTo':'jimmy_mercado@trimble.com',
+    //   'sFrom':'webserver@trimble.com',
+    //   'sBody':'Hello World',
+    //   'sCC':'',
+    //   'sBCC':'',
+    //   'format':'HTML',
+    // }
     let x='?sSubject=subject' +
       '&sTo=jimmy_mercado@trimble.com'+
       '&sFrom=webserver@trimble.com'+
